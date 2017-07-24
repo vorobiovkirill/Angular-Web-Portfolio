@@ -1,0 +1,90 @@
+.projects-wrapper
+	@include grid-container
+
+.projects-item
+	@include grid-column(4)
+	margin-bottom: 15px
+
+.pi-thumb
+	position: relative
+	overflow: hidden
+
+	img
+		display: block
+		width: 100%
+		height: auto
+
+	&:hover
+
+		.pi-thumb__overlay
+			opacity: .65
+			+size(100px)
+			transform: scale(12)
+
+	&:hover
+
+		.pi-thumb__data
+			opacity: 1
+
+	&:hover
+
+		.pi-thumb__data-inner
+
+			.link
+				a
+					transform: translate(0, 0)
+
+					&:last-child
+
+						transform: translate(0, 0)
+
+			h4
+				color: #fafafe
+				font-weight: 600
+				text-transform: uppercase
+				font-size: rem(16)
+
+	&__overlay
+		+position(absolute, null null 0 0)
+		border-radius: 100%
+		background-color: $main-color
+		transform: scale(0)
+		transition: all .6s linear
+
+	&__data
+		display: block
+		+position(absolute, 0 null null 0)
+		z-index: 1
+		+size(100%)
+		opacity: 0
+		backface-visibility: hidden
+		transition: opacity .3s .2s
+
+		.pi-thumb__data-inner
+			+position(absolute, 50% null null 0)
+			+size(100% 120px)
+			color: #fff
+			text-align: center
+			margin-top: -35px
+			padding: 0 15px
+
+			.link
+				+position(relative, 0 null null 0)
+				margin: 0 0 20px 0
+				width: 100%
+				text-align: center
+
+				a
+					display: inline-block
+					+size(41px)
+					line-height: 41px
+					font-size: rem(24)
+					color: $lightwhite
+					background-color: transparent
+					border: 2px solid $lightwhite
+					margin: 0 -2px
+					transform: translate(-20px, 0)
+					transition: all .3s 0.2s
+
+					&:last-child
+						transform: translate(20px, 0)

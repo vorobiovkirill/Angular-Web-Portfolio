@@ -1,0 +1,37 @@
+.container
+	position: relative
+	max-width: 100%
+	margin-right: auto
+	margin-left: auto
+
+.img-fluid
+	max-width: 100%
+	height: auto
+
+.block-shadow
+	box-shadow: $main-shadow
+
+.section
+	position: relative
+	width: 100%
+	padding-top: 50px
+
+	&-wrapper
+		@include grid-container
+		padding: 0 15px
+
+.separator
+	+size(70px 6px)
+	display: block
+	margin-top: 15px
+	background: $accent-color
+
+.parallax-title
+	+position(absolute, 10% 50px null null)
+	z-index: 1
+	font:
+		size: rem(94)
+		weight: $bold
+	text-transform: uppercase
+	color: $title-color
+	opacity: .03

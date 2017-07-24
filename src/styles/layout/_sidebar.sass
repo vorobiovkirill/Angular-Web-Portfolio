@@ -1,0 +1,92 @@
+.header
+	+position(fixed, 0 0 null null)
+	z-index: 5000
+	display: grid
+	grid-template-areas: "h-logo" "h-nav" "h-footer"
+	grid-template-rows: [h-logo] 300px [h-nav] 1fr [h-footer] min-content
+	grid-gap: 20px 5px
+	width: $sidebar-width
+	height: 100vh
+	background-color: $main-color
+	box-shadow: $main-shadow
+
+	&--logo
+		grid-area: h-logo
+		grid-row: 1 / 2
+		text-align: center
+
+		span
+			display: block
+			margin-top: 10px
+			color: #fff
+			text-transform: uppercase
+			font:
+				size: rem(12)
+				weight: $light
+
+			&:last-child
+				font-size: rem(10)
+
+		.logo-face
+			display: inline-block
+			text-align: center
+			position: relative
+			margin: 60px 0 10px
+
+			img
+				+size(150px)
+				max-width: 100%
+				border-radius: 50%
+				transition: box-shadow .3s ease
+				box-shadow: 0px 0px 0px 8px darken($main-color, 5%)
+
+			&:hover
+
+				img
+					box-shadow: 0px 0px 0px 12px darken($main-color, 7%)
+
+			&:after
+				+position(absolute, null 10px 0 null)
+				content: ''
+				+size(25px)
+				border: 3px solid #fff
+				border-radius: 50%
+				background: linear-gradient(#2196F3 0%, #2196F3 50%, #FFC107 50%, #FFC107 100%)
+				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1)
+
+	&--nav
+		grid-area: h-nav
+		grid-row: 2 / 3
+
+		.navigation
+			margin: auto
+			width: 100%
+			text-align: center
+
+			a
+				@include transition(.2s ease-in)
+				display: block
+				margin: 0
+				padding: 15px 0
+				font-size: rem(18px)
+				color: $lightwhite
+				text-transform: capitalize
+
+				&:hover
+					@include transition(.2s ease-in)
+					background-color: $lightwhite
+					color: $main-color
+
+				&.active
+					@include transition(.2s ease-in)
+					background-color: $lightwhite
+					color: $main-color
+
+	&--footer
+		grid-area: h-footer
+		grid-row: 3
+		padding: 10px 0
+		text-align: center
+		color: #fff
+		font-size: rem(10px)
+		text-transform: uppercase

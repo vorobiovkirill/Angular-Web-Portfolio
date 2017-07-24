@@ -1,0 +1,65 @@
+.skills-wrapper
+	@include grid-container
+	margin-bottom: 30px
+
+	.skills-card
+		@include grid-column(3)
+		box-shadow: $main-shadow
+		transition: all 0.3s cubic-bezier(0.25, .08, 0.25, 1)
+
+		&:hover
+			box-shadow: $main-shadow-hover
+			transform: translateY(-7px)
+
+		.skill
+			position: relative
+			width: 100%
+			float: left
+			margin-bottom: 15px
+			padding: 0 10px
+
+			span
+				display: block
+				margin-bottom: 25px
+
+		.skill-title
+			color: #808080;
+			margin-bottom: 10px
+			font-weight: 400
+			font-size: rem(14)
+
+		.skill-bar
+			+position(absolute, null null 0 null)
+			width: 0
+			height: 9px
+			background: #F5F5F5
+			transition: 1s cubic-bezier(1, 0, 0.5, 1)
+
+			span
+				float: left
+				width: 0%
+				background: $accent-color
+				height: 9px
+				position: relative
+				transition: 1s cubic-bezier(1, 0, 0.5, 1)
+
+				b
+					float: left
+					width: 100%
+					position: relative
+					text-align: right
+					opacity: 0
+					font-size: rem(14)
+					color: $accent-color
+					font-weight: 700
+					top: -20px
+
+	.skills.active
+
+		.skill
+
+			.skill-bar
+				width: 100%
+
+	.skills-content
+		@include grid-container

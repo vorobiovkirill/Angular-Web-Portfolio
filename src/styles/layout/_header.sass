@@ -1,0 +1,46 @@
+.page
+	margin-right: $sidebar-width
+	overflow: hidden
+
+.intro-bg
+	position: relative
+	+size(100% 100vh)
+	background:
+		image: url('../img/intro.jpg')
+		repeat: no-repeat
+		size: cover
+		position: center center
+
+.intro
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: flex-end
+	align-items: center
+	align-content: flex-start
+	height: 100vh
+
+	.intro-content
+		margin-right: 50px
+		text-align: right
+
+		h1
+			color: #fff
+			font-size: rem(70px)
+			text-transform: uppercase
+			font-weight: $bold
+
+			span
+				display: block
+				font:
+					size: rem(30px)
+					weight: $semi-bold
+		.element
+			color: #fff
+			text-transform: uppercase
+			font:
+				size: rem(24)
+				weight: $light
+
+		.cv-download
+			margin-top: 15px
