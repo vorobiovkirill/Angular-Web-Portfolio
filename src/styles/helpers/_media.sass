@@ -2,14 +2,18 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.skills-card
+		@include grid-column(6)
+
+	.projects-item
+		@include grid-column(6)
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
 	.page
-		margin-right: 0
+		padding-right: 0
 
 	.header
 		display: none
@@ -40,7 +44,24 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+
+	.skills-card
+		@include grid-column(6)
+
+	.projects-item
+		@include grid-column(6)
+
+	.footer
+		padding: 15px 15px 15px 15px
+
+	.copyright
+		@include grid-column(12)
+		text-align: center
+
+	.social-link
+		@include grid-column(12)
+		padding-top: 15px
+		text-align: center
 
 
 /* Extra Small Devices, Phones */
@@ -55,6 +76,12 @@
 		margin-bottom: 15px
 
 	.resume-block__info
+		@include grid-column(12)
+
+	.skills-card
+		@include grid-column(12)
+
+	.projects-item
 		@include grid-column(12)
 
 

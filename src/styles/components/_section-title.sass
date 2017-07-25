@@ -6,31 +6,29 @@
 		position: relative
 		width: 100%
 		color: $main-color
-		font-size: rem(46)
-		font-weight: 900
+		font-size: 46px
+		font-weight: $extra-bold
 		text-align: left
 		text-transform: uppercase
 
 		&:before
+			+position(absolute, -15px null null -20px)
+			width: 100px
+			height: 100px
 			content: ''
-			+position(absolute, -15px null null -15px)
-			+size(100px)
 			background: $main-color
-			opacity: .11
+			opacity: 0.10
 
 	p
 		max-width: 500px
 		font:
-			size: rem(12)
+			size: 12px
 			style: italic
-
-
-.section-subtitle
 
 	.subtitle
 		display: inline-block
+		margin-top: 30px
 		padding: 5px 10px
 		color: $lightwhite
 		background-color: $main-color
-		font-weight: 300
-		margin-bottom: 30px
+		font-weight: $light

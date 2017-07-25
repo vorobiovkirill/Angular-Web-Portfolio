@@ -5,7 +5,6 @@
 	@include grid-column(5)
 
 .contact-item
-	@include grid-column(12)
 	padding-top: 30px
 
 	&__title
@@ -13,7 +12,7 @@
 
 		h3
 			color: $accent-color
-			font-size: rem(18)
+			font-size: 18px
 			text-align: center
 
 		p
@@ -21,7 +20,8 @@
 			margin-top: 15px
 
 		&:before
-			+size(60px 2px)
+			width: 60px
+			height: 2px
 			background-color: $accent-color
 			content: ''
 			display: block
@@ -37,15 +37,6 @@
 .contact-info
 	text-align: center
 
-	i
-		+size(85px)
-		background-color: #F5F5F5
-		color: $accent-color
-		border-radius: 50%
-		margin-bottom: 20px
-		font-size: rem(40)
-		line-height: rem(85)
-
 	p
-		line-height: rem(18px)
-		font-size: rem(14)
+		line-height: 18px
+		font-size: 14px

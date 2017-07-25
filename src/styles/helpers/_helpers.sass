@@ -4,6 +4,9 @@
 	margin-right: auto
 	margin-left: auto
 
+.row
+	@include grid-container
+
 .img-fluid
 	max-width: 100%
 	height: auto
@@ -14,24 +17,21 @@
 .section
 	position: relative
 	width: 100%
-	padding-top: 50px
-
-	&-wrapper
-		@include grid-container
-		padding: 0 15px
+	padding: 50px 0 25px
 
 .separator
-	+size(70px 6px)
 	display: block
 	margin-top: 15px
+	width: 70px
+	height: 6px
 	background: $accent-color
 
 .parallax-title
 	+position(absolute, 10% 50px null null)
 	z-index: 1
 	font:
-		size: rem(94)
+		size: 94px
 		weight: $bold
 	text-transform: uppercase
 	color: $title-color
-	opacity: .03
+	opacity: 0.03
