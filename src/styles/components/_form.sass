@@ -1,0 +1,78 @@
+.contant_form
+	@include grid-column(12)
+
+.form
+	max-width: 500px
+	margin: 0 auto
+
+.form__wrapper
+	overflow: hidden
+	position: relative
+	z-index: 1
+	display: inline-block
+	margin-bottom: 1.6rem
+	width: 100%
+	vertical-align: top
+
+.form__wrapper--submit
+	padding: 1.6rem 0
+	text-align: center
+
+.form__input
+	display: block
+	position: relative
+	margin-top: 2rem
+	padding: 10px 0
+	width: 100%
+	box-sizing: border-box
+	// color: #444
+	font-size: 16px
+	outline: 0
+	background: transparent
+	border: none
+	border-bottom: solid 1px #ddd
+	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1)
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #2196f3 4%)
+	background-position: -500px 0
+	background-size: 500px 100%
+	background-repeat: no-repeat
+
+	&:required
+		box-shadow: none
+
+	&.error
+		transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1)
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #f44336 4%)
+		background-position: 0 0
+		background-size: 500px 100%
+		background-repeat: no-repeat
+
+	&:focus
+		background-position: 0 0
+		color: #444
+		transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1)
+
+.form__label
+	position: absolute
+	bottom: 0
+	left: 0
+	padding: 0
+	width: 100%
+	height: calc(100% - 1em)
+	text-align: left
+	pointer-events: none
+	color: #999
+
+.form__label-content
+	position: absolute
+	transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1)
+
+.form__input:focus ~ .form__label .form__label-content,
+.form--filled .form__label-content
+	font-size: 1.4rem
+	transform: translate3d(0, -65%, 0)
+
+.error
+	display: block
+	font-size: 1.4rem
+	color: #f44336
