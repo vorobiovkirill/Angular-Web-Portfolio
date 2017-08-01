@@ -21,7 +21,7 @@ const config = {
 
 	output: {
 		publicPath: '/',
-		path: path.resolve(__dirname, 'docs'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/[name].bundle.js'
 	},
 
@@ -44,7 +44,7 @@ const config = {
 	 * @link https://webpack.github.io/docs/webpack-dev-server.html
 	 */
 	devServer: {
-		contentBase: path.resolve(__dirname, 'docs'),
+		contentBase: path.resolve(__dirname, 'dist'),
 		compress: true,
 		historyApiFallback: true,
 		port: 8080,
