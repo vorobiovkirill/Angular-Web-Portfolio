@@ -12,10 +12,11 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 const SpritesmithPlugin = require('webpack-spritesmith');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
+const METADATA = require('./configs/metadata-config');
+
 const config = {
 
 	entry: {
-		'polyfills': './src/scripts/polyfills.ts',
 		'main': './src/scripts/main.ts',
 	},
 
@@ -34,7 +35,7 @@ const config = {
 	},
 
 	resolve: {
-		extensions: ['.ts', '.js', '.sass', '.scss', '.html'],
+		extensions: ['.ts', '.js', '.css','.sass', '.scss', '.html'],
 		modules: [
 			'node_modules',
 		],
@@ -126,9 +127,9 @@ const config = {
 		 * @link https://github.com/ampedandwired/html-webpack-plugin
 		 */
 		new HtmlWebpackPlugin({
-			title: 'Web Portfolio',
-			description: 'Web Portfolio by Vorobiov Kirill',
-			baseUrl: '/',
+			title: METADATA.title,
+			description: METADATA.description,
+			baseUrl: METADATA.baseUrl,
 			template: 'src/index.html.ejs',
 			chunksSortMode: 'dependency',
 			inject: 'body',

@@ -3,66 +3,64 @@
 	background: #fff
 	border-top: 1px solid lighten($main-color, 35%)
 
-.footer-wrapper
-	@include grid-container
-	position: relative
+	.copyright
+		@include grid-column(6)
+		font:
+			size: 14px
+			weight: $semi-bold
 
-.copyright
-	@include grid-column(6)
-	font-size: 14px
+		.fa-heart
+			color: $thunderbird
+			animation: heartBeat 2s infinite
 
-	.fa-heart
-		color: $thunderbird
-		animation: heartBeat 2s infinite
+	.social-link
+		@include grid-column(6)
+		text-align: right
 
-.social-link
-	@include grid-column(6)
-	text-align: right
+		.social-icon
+			margin-left: 15px
+			font-size: 20px
+			color: rgba(68, 68, 68, 0.2)
 
-	.social-icon
-		margin-left: 15px
-		font-size: 20px
-		color: rgba(68, 68, 68, 0.2)
+			&:first-child
+				margin-left: 0
 
-		&:first-child
-			margin-left: 0
+		.si-facebook
+			&:hover
+				color: #3b5998
 
-	.si-facebook
-		&:hover
-			color: #3b5998
+		.si-vkontakte
+			&:hover
+				color: #45668e
 
-	.si-vkontakte
-		&:hover
-			color: #45668e
+		.si-instagram
+			&:hover
+				color: #833ab4
 
-	.si-instagram
-		&:hover
-			color: #833ab4
+		.si-pinterest
+			&:hover
+				color: #bd081c
 
-	.si-pinterest
-		&:hover
-			color: #bd081c
+		.si-behance
+			&:hover
+				color: #1769ff
 
-	.si-behance
-		&:hover
-			color: #1769ff
+		.si-twitter
+			&:hover
+				color: #1da1f2
 
-	.si-twitter
-		&:hover
-			color: #1da1f2
+		.si-g-plus
+			&:hover
+				color: #dd4b39
 
-	.si-g-plus
-		&:hover
-			color: #dd4b39
+		.si-dribbble
+			&:hover
+				color: #8aba56
 
-	.si-dribbble
-		&:hover
-			color: #8aba56
+		.si-linkedin
+			&:hover
+				color: #0077b5
 
-	.si-linkedin
-		&:hover
-			color: #0077b5
-
-	.si-github
-		&:hover
-			color: #333
+		.si-github
+			&:hover
+				color: #333

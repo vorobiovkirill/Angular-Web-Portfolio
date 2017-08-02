@@ -7,6 +7,18 @@
 .row
 	@include grid-container
 
+.page-wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+
+.content
+	flex-grow: 1
+	padding-right: $sidebar-width
+
+.page
+	overflow: hidden
+
 .img-fluid
 	max-width: 100%
 	height: auto
