@@ -8,9 +8,11 @@
 	<title><%= htmlWebpackPlugin.options.title %></title>
 	<meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
 
+	<% if (webpackConfig.htmlElements.headTags) { %>
+	<%= webpackConfig.htmlElements.headTags %>
+	<% } %>
+
 	<base href="<%= htmlWebpackPlugin.options.baseUrl %>">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2">
 
 </head>
 <body>

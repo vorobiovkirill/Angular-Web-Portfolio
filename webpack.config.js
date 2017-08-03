@@ -176,10 +176,18 @@ const config = {
 		// }),
 
 		/**
+		 * @link https://github.com/AngularClass/angular2-webpack-starter/tree/master/config/html-elements-plugin
+		 */
+		new HtmlElementsWebpackPlugin({
+			headTags: require('./configs/head-config'),
+		}),
+
+		/**
 		 * @link https://www.npmjs.com/package/copy-webpack-plugin
 		 */
 		new CopyWebpackPlugin([
-			{ from: 'src/img', to: 'img' }
+			{ from: 'src/img', to: 'img'},
+			{ from: 'src/files', to: 'files'},
 		]),
 
 		/**

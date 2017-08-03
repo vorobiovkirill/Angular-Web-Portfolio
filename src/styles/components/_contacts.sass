@@ -4,39 +4,18 @@
 .form-item
 	@include grid-column(6)
 
-.contact-item
-	padding-top: 30px
-
-	&__title
-		@include grid-container
-
-		h3
-			color: $accent-color
-			font-size: 18px
-			text-align: center
-
-		p
-			text-align: center
-			margin-top: 15px
-
-		&:before
-			width: 60px
-			height: 2px
-			background-color: $accent-color
-			content: ''
-			display: block
-			margin: 0 auto
-
-
-	&__information
-		@include grid-container
-
-		.contact-info
-			@include grid-column(4)
 
 .contact-info
+	margin-top: 35px
 	text-align: center
 
-	p
-		line-height: 18px
-		font-size: 14px
+	&__item
+		@include grid-column(4)
+
+		p
+			margin: 0
+			padding-top: 15px
+			font:
+				size: 14px
+				weight: $semi-bold
+			line-height: 18px
