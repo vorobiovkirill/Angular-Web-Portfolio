@@ -209,6 +209,7 @@ const config = {
 			/moment[\/\\]locale/,
 			/ru\.js/
 		),
+
 	]
 
 };
