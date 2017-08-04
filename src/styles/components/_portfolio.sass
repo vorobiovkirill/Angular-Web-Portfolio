@@ -1,5 +1,17 @@
 .projects-wrapper
-	@include grid-container
+	@include grid-column(8)
+	@include grid-push(2)
+
+	.mat-tab-header
+		margin-bottom: 50px
+
+	.mat-tab-labels
+		justify-content: center
+
+		.mat-tab-label
+			font:
+				size: 16px
+				weight: $semi-bold
 
 .projects-item
 	@include grid-column(4)

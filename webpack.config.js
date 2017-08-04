@@ -188,6 +188,7 @@ const config = {
 		new CopyWebpackPlugin([
 			{ from: 'src/img', to: 'img'},
 			{ from: 'src/files', to: 'files'},
+			{ from: 'src/assets', to: 'assets'},
 		]),
 
 		/**
