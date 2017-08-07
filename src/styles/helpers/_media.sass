@@ -12,7 +12,7 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
-	.page
+	.content
 		padding-right: 0
 
 	.header
@@ -45,24 +45,53 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
-	.skills-card
-		@include grid-column(6)
+	.section
+		padding: 25px 0 10px
 
-	.projects-item
-		@include grid-column(6)
+	// about page
+	.about-block
+		margin-bottom: 10px
+
+	.about-block__item
+		@include grid-column(12)
+
+	// porfolio page
+	.projects-wrapper
+		@include grid-column(12)
+		@include grid-push(0)
+
+	// skills page
+	.skills
+
+		.skills-card
+			@include grid-column(12)
+
+	.skills-content
+
+		h2
+			text-align: center
+
+	// contacts page
+	.form
+		max-width: 100%
+		padding: 10px
+
+	.contact-info__item
+		@include grid-column(12)
+
+	// footer
 
 	.footer
 		padding: 15px 15px 15px 15px
 
-	.copyright
-		@include grid-column(12)
-		text-align: center
+		.copyright
+			@include grid-column(12)
+			text-align: center
 
-	.social-link
-		@include grid-column(12)
-		padding-top: 15px
-		text-align: center
-
+		.social-link
+			@include grid-column(12)
+			padding-top: 15px
+			text-align: center
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)

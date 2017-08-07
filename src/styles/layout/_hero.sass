@@ -8,14 +8,20 @@
 		size: cover
 		position: center center
 
+.particles-container
+	position: relative
+	width: 100%
+	height: 100%
+
 .intro
+	+position(absolute, 50% 0 0 0)
 	display: flex
 	flex-direction: row
 	flex-wrap: nowrap
 	justify-content: flex-end
 	align-items: center
 	align-content: flex-start
-	height: 100vh
+	transform: translateY(-50%)
 
 	.intro-content
 		margin-right: 50px
