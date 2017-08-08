@@ -1,114 +1,120 @@
 .page-wrapper
 
-	.side-nav-open
-		position: fixed
+	.nav-button-open
+		+position(fixed, 10px 10px null null)
 		z-index: 20
+		display: none
 
-.hamburger
-	position: fixed
-	right: 0
-	z-index: 10
-	display: inline-block
-	width: 30px
-	height: 30px
-	padding: 0px
-	margin: 10px
-	cursor: pointer
-	transition: all 600ms ease
+.p-sidebar
 
-	span
-		cursor: pointer
-		width: 30px
-		padding: 0px
-		height: 4px
-		background: $main-color
-		box-shadow: 0px 0px 0px transparent
-		border: 0 transparent
-		text-indent: -999px
-		position: absolute
-		top: 50%
-		left: 0px
-		margin-top: -1px
-		-webkit-appearance: none
-		line-height: 0
-		transition: all 300ms ease
-		border-radius: 99px
+	md-sidenav
+		width: 60%
 
-		&:active,
-		&:focus
-			outline: 0
-			border: 0
+// .hamburger
+// 	position: fixed
+// 	right: 0
+// 	z-index: 10
+// 	display: inline-block
+// 	width: 30px
+// 	height: 30px
+// 	padding: 0px
+// 	margin: 10px
+// 	cursor: pointer
+// 	transition: all 600ms ease
 
-		&:after,
-		&:before
-			display: block
-			content: ''
-			position: absolute
-			left: 0
-			height: 4px
-			background: $main-color
-			width: 100%
-			transition: all 300ms ease
-			border-radius: 99px
+// 	span
+// 		cursor: pointer
+// 		width: 30px
+// 		padding: 0px
+// 		height: 4px
+// 		background: $main-color
+// 		box-shadow: 0px 0px 0px transparent
+// 		border: 0 transparent
+// 		text-indent: -999px
+// 		position: absolute
+// 		top: 50%
+// 		left: 0px
+// 		margin-top: -1px
+// 		-webkit-appearance: none
+// 		line-height: 0
+// 		transition: all 300ms ease
+// 		border-radius: 99px
 
-		&:after
-      		top: -10px
+// 		&:active,
+// 		&:focus
+// 			outline: 0
+// 			border: 0
 
-		&:before
-			bottom: -10px
-			left: auto
-			right: 0
+// 		&:after,
+// 		&:before
+// 			display: block
+// 			content: ''
+// 			position: absolute
+// 			left: 0
+// 			height: 4px
+// 			background: $main-color
+// 			width: 100%
+// 			transition: all 300ms ease
+// 			border-radius: 99px
 
-		&.active
-			transform: rotate(360deg)
+// 		&:after
+//       		top: -10px
 
-			span
-				background:transparent
+// 		&:before
+// 			bottom: -10px
+// 			left: auto
+// 			right: 0
 
-				&:before
-					transform: rotate(135deg) translate(-10px, 10px) scale(1.2,1.2)
+// 		&.active
+// 			transform: rotate(360deg)
 
-				&:after
-					transform: rotate(-135deg) translate(-10px, -10px) scale(1.2,1.2)
+// 			span
+// 				background:transparent
 
-.mobile-nav
-	position: fixed
-	top: 100%
-	display: flex
-	z-index: 9999
-	flex-flow: column nowrap
-	justify-content: center
-	width: 100%
-	height: 100vh
-	background-color: transparentize($main-color, 0.3)
-	overflow-x: hidden
-	transition: 0.5s
-	text-align: center
+// 				&:before
+// 					transform: rotate(135deg) translate(-10px, 10px) scale(1.2,1.2)
 
-	a
-		clear: both
-		color: #fff
-		font-size: 22px
-		display: block
-		text-decoration: none
-		padding: 1rem 0
-		transition: 0.3s
+// 				&:after
+// 					transform: rotate(-135deg) translate(-10px, -10px) scale(1.2,1.2)
 
-	a:not(:first-child):hover
-		background-color: $lightwhite
-		color: $main-color
+// .mobile-nav
+// 	position: fixed
+// 	top: 100%
+// 	display: flex
+// 	z-index: 9999
+// 	flex-flow: column nowrap
+// 	justify-content: center
+// 	width: 100%
+// 	height: 100vh
+// 	background-color: transparentize($main-color, 0.3)
+// 	overflow-x: hidden
+// 	transition: 0.5s
+// 	text-align: center
 
-	&.nav-open
-		top: 0
+// 	a
+// 		clear: both
+// 		color: #fff
+// 		font-size: 22px
+// 		display: block
+// 		text-decoration: none
+// 		padding: 1rem 0
+// 		transition: 0.3s
 
-	.close-nav
-		display: inline-block
-		background-color: transparent
-		border: 0
-		outline: 0
-		cursor: pointer
-		font-size: 30px
-		padding: 0
-		margin: 0
-		+position(absolute, 20px null null 45px)
-		color: #fff
+// 	a:not(:first-child):hover
+// 		background-color: $lightwhite
+// 		color: $main-color
+
+// 	&.nav-open
+// 		top: 0
+
+// 	.close-nav
+// 		display: inline-block
+// 		background-color: transparent
+// 		border: 0
+// 		outline: 0
+// 		cursor: pointer
+// 		font-size: 30px
+// 		padding: 0
+// 		margin: 0
+// 		+position(absolute, 20px null null 45px)
+// 		color: #fff

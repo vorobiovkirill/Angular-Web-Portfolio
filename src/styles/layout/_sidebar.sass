@@ -1,11 +1,11 @@
 .header
-	+position(fixed, 0 0 null null)
+	+position(fixed, 0 0 0 null)
 	z-index: 5000
 	display: grid
-	grid-template-areas: "h-logo" "h-nav" "h-footer"
-	grid-template-rows: [h-logo] 300px [h-nav] 1fr [h-footer] min-content
+	grid-template-areas: "h-logo" "h-options" "h-nav" "h-footer"
+	grid-template-rows: [h-logo] 300px [h-options] min-content [h-nav] 1fr [h-footer] min-content
 	width: $sidebar-width
-	height: 100vh
+	height: 100%
 	background-color: $main-color
 	box-shadow: $main-shadow
 
@@ -57,9 +57,14 @@
 			&:last-child
 				font-size: 10px
 
+	&--options
+		grid-area: h-options
+		grid-row: 2 / 3
+		align-self: center
+
 	&--nav
 		grid-area: h-nav
-		grid-row: 2 / 3
+		grid-row: 3 / 4
 		align-self: center
 
 		.navigation
@@ -86,7 +91,7 @@
 
 	&--footer
 		grid-area: h-footer
-		grid-row: 3
+		grid-row: 4
 		padding: 10px 0
 		text-align: center
 		color: #fff

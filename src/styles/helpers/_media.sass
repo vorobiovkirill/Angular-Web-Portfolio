@@ -2,12 +2,18 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	.skills-card
-		@include grid-column(6)
 
-	.projects-item
-		@include grid-column(6)
+	.page-wrapper
 
+		.nav-button-open
+			display: inline-block
+
+	p-sidebar
+		display: none
+
+	.content,
+	.footer
+		padding-right: 0
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
