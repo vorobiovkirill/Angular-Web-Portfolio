@@ -1,5 +1,5 @@
 module.exports = {
 	title: 'Web Portfolio',
 	description: 'Web Portfolio by Vorobiov Kirill',
-	baseUrl: '/'
+	baseUrl: 'https://vorobyovkirill/Angular-Web-Portfolio'
 };
