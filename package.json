@@ -32,7 +32,7 @@
     "build": "rimraf dist coverage && webpack --progress --colors",
     "clean-install": "rimraf dist node_modules coverage && npm install && npm run build",
     "deploy": "gh-pages -d dist",
-    "lint:css": "sass-lint --config ./.sass-lint.yml 'src/**/*.sass' --verbose",
+    "lint:css": "sass-lint --config ./.sass-lint.yml --no-exit --verbose",
     "start": "webpack-dev-server --progress --colors",
     "watch": "npm run start",
     "rmrf": "rimraf dist coverage"
@@ -86,7 +86,6 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
-    "gh-pages": "^1.0.0",
     "html-elements-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.30.1",
