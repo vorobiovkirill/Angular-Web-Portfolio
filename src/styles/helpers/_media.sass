@@ -18,14 +18,16 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+	portfolio
+
+		.nav-button-open
+			display: block
+
 	.content
 		padding-right: 0
 
 	.header
 		display: none
-
-	.open-nav
-		display: block
 
 	.intro
 		justify-content: center
@@ -138,6 +140,10 @@
 	.projects-item
 		@include grid-column(12)
 
+	.submit-comtainer
+
+		.btn-submit
+			width: 100%
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

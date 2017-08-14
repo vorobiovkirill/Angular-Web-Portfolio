@@ -30,8 +30,8 @@
   ],
   "scripts": {
     "build": "rimraf dist coverage && webpack --progress --colors",
+    "build:prod": "rimraf dist coverage && webpack --hide-modules=true",
     "clean-install": "rimraf dist node_modules coverage && npm install && npm run build",
-    "deploy": "gh-pages -d dist",
     "lint:css": "sass-lint --config ./.sass-lint.yml --no-exit --verbose",
     "start": "webpack-dev-server --progress --colors",
     "watch": "npm run start",
