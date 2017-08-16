@@ -15,6 +15,9 @@
   "bugs": "https://github.com/vorobyovkirill/Angular-Web-Portfolio/issues",
   "keywords": [
     "angular",
+    "angular2",
+    "angular4",
+    "typescript",
     "sass",
     "scss",
     "bourbon",
@@ -29,7 +32,7 @@
     "normalize.css"
   ],
   "scripts": {
-    "build": "rimraf dist coverage && webpack --progress --colors",
+    "build": "rimraf dist coverage && webpack --progress --colors --profile --bail",
     "build:prod": "rimraf dist coverage && webpack --hide-modules=true",
     "clean-install": "rimraf dist node_modules coverage && npm install && npm run build",
     "lint:css": "sass-lint --config ./.sass-lint.yml --no-exit --verbose",
